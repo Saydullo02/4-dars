@@ -10,29 +10,160 @@
 </head>
 <body>
     
-    <h1 class="visually-hidden"></h1>
-
     <header>
-        <div class="container">
-
+        <div class="container pt-3 mb-4">
+            <h1 class="h1 text-center">
+                Movies catalog
+            </h1>
         </div>
     </header>
-
+    
     <main>
-        <section class="hero">
-            <div class="container">
-
+        <section class="container">
+            <div class="row">
+                <div class=" col-4 left-side p-3">
+                    <div class="top-side mb-4">
+                        <form action="/action_page.php">
+                            <div class="mb-3 mt-3">
+                                <input type="search" class="form-control" id="email" placeholder="Enter movie name" name="movie-name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="form-control" id="rating" placeholder="Enter movie rating" name="rating-movie">
+                            </div>
+                            
+                            <select class="form-select mb-3 p-2" aria-label="Default select example">
+                                <option selected value="all">All</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            
+                            <select class="form-select mb-3 p-2" aria-label="Default select example">
+                                <option selected value="Rating (highto low)">Rating (highto low)</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            
+                            <button type="submit" class="btn btn-primary w-100">Search</button>
+                        </form>
+                    </div>
+                    
+                    <div class="bottom-side">
+                        
+                        <h2 class="h3">
+                            Bookmarket movies
+                        </h2>
+                        
+                        <ul class="list-group">
+                            <li class="list-group-item p-3">
+                                <h3 class="h6">
+                                    Avengers:Infinity War
+                                </h3>
+                                <button type="button" class="btn btn-danger">Remove</button>
+                                
+                            </li>
+                            <li class="list-group-item p-3">
+                                <h3 class="h6">
+                                    The Avengers
+                                </h3>
+                                <button type="button" class="btn btn-danger">Remove</button>
+                                
+                            </li>
+                            <li class="list-group-item p-3">
+                                <h3 class="h6">
+                                    12 Years a Slave
+                                </h3>
+                                <button type="button" class="btn btn-danger">Remove</button>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class=" col-8 right-side  p-4">
+                    
+                    <h2 class="h4">
+                        Search results: <span id="search-result">39</span>
+                    </h2>
+                    
+                    <div class="alert alert-info">
+                        Use the formon the to left to searchfor a movie 
+                    </div>
+                    
+                    <ul class="row list-inline mb-5">  
+                        <li class="col-6">
+                            <div class="card">
+                                
+                                <img class="card-img-top" src="https://picsum.photos/200" alt="Card image" width="304" height="300">
+                                
+                                <div class="card-body">
+                                    
+                                    <h4 class="h4">
+                                        Avengers:Infinity War
+                                    </h4>
+                                    
+                                    <p class="card-text d-flex align-items-center fs-5">
+                                        <img src="./image/img-1.jpg" alt="" width="40" height="40">
+                                        <span id="year">2018</span>
+                                    </p>
+                                    
+                                    <p class="card-text d-flex align-items-center fs-5">
+                                        <img class="me-2" src="./image/star-1.png" alt="" width="20" height="20">
+                                        <span id="reting">8.7</span>
+                                    </p>
+                                    
+                                    <div class="d-flex gap-4">
+                                        <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                        <button type="button" class="btn btn-outline-info">More info</button>
+                                        <button type="button" class="btn btn-outline-warning">Bookmark</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="col-6">
+                            <div class="card">
+                                
+                                <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/300" alt="Card image" width="304" height="300">
+                                
+                                <div class="card-body">
+                                    
+                                    <h4 class="h4">
+                                        Avengers:Infinity War
+                                    </h4>
+                                    
+                                    <p class="card-text d-flex align-items-center fs-5">
+                                        <img src="./image/img-1.jpg" alt="" width="40" height="40">
+                                        <span id="movie-year">2012</span>
+                                    </p>
+                                    
+                                    <p class="card-text d-flex align-items-center fs-5">
+                                        <img class="me-2" src="./image/star-1.png" alt="" width="20" height="20">
+                                        <span id="movie-reting">8.1</span>
+                                    </p>
+                                    
+                                    <div class="d-flex gap-4 ">
+                                        <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                        <button type="button" class="btn btn-outline-info">More info</button>
+                                        <button type="button" class="btn btn-outline-warning">Bookmark</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <section>
-            <div class="container">
-                
-            </div>
-        </section>
-    </footer>
     
 </body>
 </html>
